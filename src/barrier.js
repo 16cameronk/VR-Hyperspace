@@ -55,7 +55,6 @@ MG.Barrier = function (type) {
         /* The path representing the face nearest the camera */
         mFrontPath = document.getElementById(MG.BARRIER_PATH_IDS[mType]).cloneNode(true);
         mFrontPath.setAttribute('class', 'barrier-path-front');
-		mFrontPath.setAttribute('fill', '#dd3b3b');
 
         /* The path partially obscured by the front path, added to give the illusion of thickness. */
         mBackPath = document.getElementById(MG.BARRIER_PATH_IDS[mType]).cloneNode(true);
@@ -131,10 +130,10 @@ MG.Barrier = function (type) {
         offset = Math.max(MG.LINE_OF_SIGHT - MG.BARRIER_SPACING ,Math.min(MG.LINE_OF_SIGHT,offset));
         var fog = 100 -100*(MG.LINE_OF_SIGHT - offset)/MG.BARRIER_SPACING;
 
-        mFrontPath.setAttribute('fill',   '#46e6e6');
-        mBackPath.setAttribute('fill',    '#e646da');
+        mFrontPath.setAttribute('fill',   '#55fff8');
+        mBackPath.setAttribute('fill',    'white');
         mFrontPath.setAttribute('stroke', '#000');
-        mBackPath.setAttribute('stroke',  '#000');
+        mBackPath.setAttribute('stroke',  '#b4b4b4');
     };
 
     this.getType = function () {

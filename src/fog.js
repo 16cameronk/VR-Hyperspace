@@ -1,3 +1,6 @@
+
+
+
 MG.fog = (function (){
     var SHOW_TIME = 2.0;
     var HIDE_TIME = 4.0;

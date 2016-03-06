@@ -22,12 +22,12 @@ MG.tunnelWall1 = (function (rootNode) {
 
             var gradientStart = document.createElementNS(NAMESPACE_SVG, 'stop');
             gradientStart.setAttribute('offset', (5*NEAR_CLIPPING_PLANE / GRADIENT_START) + '');
-            gradientStart.setAttribute('stop-color', '#fd5ae4');
+            gradientStart.setAttribute('stop-color', '#fff');
             gradient.appendChild(gradientStart);
 
             var gradientStop = document.createElementNS(NAMESPACE_SVG, 'stop');
             gradientStop.setAttribute('offset', (5*NEAR_CLIPPING_PLANE / GRADIENT_STOP) + '');
-            gradientStop.setAttribute('stop-color', '#25f5f5');
+            gradientStop.setAttribute('stop-color', '#969696');
             gradient.appendChild(gradientStop);
 
             for (var i=0; i < NUM_SEGMENTS; i++) {
@@ -36,7 +36,7 @@ MG.tunnelWall1 = (function (rootNode) {
                 mSegments[i].setAttribute('class', 'wall-segment-dark');
                 mSegments[i].setAttribute('d', 'M 0,0 l 1000,50 l 0,-50 z');
 
-                mSegments[i].setAttribute('fill', '#25f5f5');
+                mSegments[i].setAttribute('fill', 'url(#tunnel-wall-segment-fade-gradient)');
 
 
                 rootNode.appendChild(mSegments[i]) ;

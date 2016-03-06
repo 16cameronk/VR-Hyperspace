@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>VRocket</title>
-  <meta name="author" content="Ankur Jain &lt;ankur@ankurkjain.com&gt;" />
-  <meta name="description" content="A minimalist VR Game for Google Cardboard" />
+  <title>Hyperspace VR</title>
+  <meta name="author" content="Cameron King" />
+  <meta name="description" content="Hyperspace.tk for VR" />
 
   <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
    
@@ -13,7 +13,7 @@
     /* <![CDATA[ */
     body {
         margin: 0;
-    }
+        background-color:black}
 
     .barrier path {
       stroke-width: 2;
@@ -22,7 +22,7 @@
 
     .hud-background {
       stroke: none;
-      fill: red;
+      fill: white;
       fill-opacity: 0.8;      
     }
 
@@ -34,7 +34,7 @@
     }
 
     text {
-      font-family: sans-serif;
+      font-family: monospace;
       font-weight: bold;
     }
 
@@ -63,14 +63,12 @@
     <svg id="tunnel1"
        width="50%" height="100%"
        preserveAspectRatio="xMidYMid meet"
-		fill="#3cf5e7"
        viewBox="-100 -100 200 200"
        visibility="hidden" >
     </svg>
     <svg id="tunnel2"
        x="50%"
        width="50%" height="100%"
-	   fill="#f53ca7"
        preserveAspectRatio="xMidYMid meet"
        viewBox="-100 -100 200 200"
        visibility="hidden" >
@@ -245,7 +243,7 @@
   
               <rect id="hud-speedometer-bar"
                  clip-path="url(#hud-speedometer-bar-clip-path)"
-                 fill="#333333"
+                 fill="#white"
                  stroke="none"
                  x="-0.5"
                  width="1.0"
@@ -265,10 +263,10 @@
             </g>
   
             <text id="hud-speedometer-label-text"
-               transform="translate(1.2, 0.4), scale(0.012,-0.012)">SPEED</text>
+               transform="translate(1.2, 0.4), scale(0.012,-0.012)" fill="white">SPEED</text>
   
             <text id="hud-speedometer-speed-text"
-               transform="translate(3, 0.1), scale(0.02,-0.02)" />
+               transform="translate(3, 0.1), scale(0.02,-0.02)" fill="white"/>
   
             <clipPath
                id="speedometer-clip-path" >
@@ -286,7 +284,7 @@
               <g id="hud-lives-indicator-missile"
                  transform="rotate(-65), translate(0,-0.5), scale(0.6,0.6)">
                 <path
-                   style="fill:red; stroke: black; stroke-linejoin:round;"
+                   style="fill:white; stroke: black; stroke-linejoin:round;"
                    stroke-width="0.04"
                    d="m -0.07, 0.01
                       L -0.2, -0.07
@@ -294,7 +292,7 @@
                       L  0.2, -0.07
                       L  0.07, 0.01" />
                 <path
-                   fill="red"
+                   fill="white"
                    stroke="black"
                    stroke-width="0.04"
                    d="m -0.07, 0.0
@@ -331,7 +329,7 @@
                  transform="translate(0.3,0.15), scale(1.4,1.4)"
                  xlink:href="#hud-lives-indicator-missile" />
               <path
-                 stroke="red"
+                 stroke="white"
                  stroke-width="0.02"
                  stroke-opacity="0.2"
                  d="m  0.0, 0.04
@@ -351,7 +349,7 @@
                  xlink:href="#hud-lives-indicator-missile" />
               <path
                  transform="scale(0.8,0.8)"
-                 stroke="red"
+                 stroke="white"
                  stroke-width="0.02"
                  stroke-opacity="0.2"
                  d="M  0.0, 0.4
@@ -374,12 +372,12 @@
   
       <!-- Level Indicator ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <text id="hud-level-indicator"
-           transform="translate(0.035, 0.035), scale(0.0025,0.0025)" />
+           transform="translate(0.035, 0.035), scale(0.0025,0.0025)" fill="white"/>
   
       <!-- Frame Rate Indicator ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
         <text id="hud-frame-rate-indicator"
            transform="translate(0.035, 0.08), scale(0.0025,0.0025)"
-           fill="#333333" />
+           fill="white" />
   
       </svg>
   
@@ -392,7 +390,7 @@
           <path
              stroke="#333333"
              stroke-width="0.0005"
-             fill="red"
+             fill="white"
              opacity="0.8"
              d="M  0.03   0.0
                 l -0.04   0.0
@@ -411,7 +409,7 @@
                x="-0.01"
                width="0.04"
                height="0.008"
-               fill="#777777" />
+               fill="#55fff8" />
             <text
                fill="#777777"
                transform="translate(-0.04,-0.002), scale(0.001,-0.001)">PB</text>
@@ -423,7 +421,7 @@
                x="-0.01"
                width="0.04"
                height="0.008"
-               fill="#333333" />
+               fill="#55fff8" />
           </g>
   
           <path
@@ -446,7 +444,6 @@
   <!--== BANNER ===============================================================-->
     <svg id="banner"
        width="130%" height="100%"
-		 fill="#red"
        preserveAspectRatio="xMaxYMid meet"
        viewBox="0 0 0.01 1"
        overflow="visible"
@@ -454,7 +451,7 @@
       <rect
          x="-0.1" y="0.45"
          width="6" height="0.2"
-         fill="#red"
+         fill="#000"
          opacity="0.95"
          stroke-linejoin="round"
          stroke-linecap="round"
@@ -462,11 +459,11 @@
   
       <g transform="translate(-0.05,0.54) scale(0.004,0.004)">
         <text id="banner-title"
-           fill="red" ></text>
+           fill="#fff" ></text>
       </g>
       <g transform="translate(0.25,0.6) scale(0.0025,0.0025)">
         <text id="banner-text"
-           fill="#ff3737" ></text>
+           fill="#ccc" ></text>
       </g>
     </svg>
   
@@ -475,9 +472,7 @@
   
   <!--== BARRIER PATHS ========================================================-->
       <path
-		
-        id="barrier-path-1"
-		fill="red"
+         id="barrier-path-1"
          d="M 100,0
             A 100,100 0 0,1 0,100
             A 100,100 0 0,1 -100,0
@@ -498,7 +493,6 @@
             z" />
   
       <path
-		fill="red"
          id="barrier-path-2"
          d="M 100,0
             A 100,100 0 0,1  0,   100
@@ -531,7 +525,6 @@
             z" />
   
       <path
-		fill="red"
          id="barrier-path-3"
          d="M 100,0
             A 100,100 0 0,1  0,   100
@@ -549,7 +542,6 @@
             z" />
   
       <path
-			fill="red"
          id="barrier-path-4"
          d="M 100,0
             A 100,100 0 0,1  0,   100
@@ -565,7 +557,6 @@
             z" />
   
       <path
-			fill="red"
          id="barrier-path-5"
          d="M 100,0
             A 100,100 0 0,1  0,   100
@@ -602,7 +593,6 @@
             z" />
   
       <path
-		fill="red"
          id="barrier-path-blank"
          d="M 100,0
             A 100,100 0 0,1  0,   100
